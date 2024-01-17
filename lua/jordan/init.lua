@@ -1,3 +1,5 @@
 require("jordan.telescope")
 require("jordan.remap")
+require("jordan.treesitter")
 require("jordan.colors")
+require("jordan.lsp")

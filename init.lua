@@ -18,7 +18,12 @@ local plugins = {
     	},
 	{
 		{ 'rose-pine/neovim', name = 'rose-pine' }
-	}
+	},
+	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+	{'neovim/nvim-lspconfig'},
+	{'hrsh7th/cmp-nvim-lsp'},
+	{'hrsh7th/nvim-cmp'},
+	{'L3MON4D3/LuaSnip'},
 }
 
 require("lazy").setup(plugins, opts)
