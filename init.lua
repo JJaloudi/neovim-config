@@ -585,7 +585,13 @@ local servers = {
       -- diagnostics = { disable = { 'missing-fields' } },
     },
   },
+
+  html = {
+    filetypes = { 'html', 'ejs' }
+  },
 }
+
+servers["ejs"] = servers["html"]
 
 -- Setup neovim lua configuration
 require('neodev').setup()
@@ -603,6 +609,7 @@ mason_lspconfig.setup {
 
 mason_lspconfig.setup_handlers {
   function(server_name)
+    print('Setting up handler for: ' .. server_name)
     require('lspconfig')[server_name].setup {
       capabilities = capabilities,
       on_attach = on_attach,
