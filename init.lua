@@ -589,9 +589,13 @@ local servers = {
   html = {
     filetypes = { 'html', 'ejs' }
   },
+  ['emmet_ls'] = {
+    filetypes = { 'html', 'ejs' }
+  },
+  ['emmet_language_server'] = {
+    filetypes = { 'html', 'ejs' }
+  },
 }
-
-servers["ejs"] = servers["html"]
 
 -- Setup neovim lua configuration
 require('neodev').setup()
